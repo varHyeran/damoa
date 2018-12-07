@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 
+	public OTHER_CLASS implements com.varHyeran.damoa.member.mapper.MemberMapper {
+	
+	}
+ -->
+<mapper namespace="com.varHyeran.damoa.member.mapper.MemberMapper">
+	<!-- 전체회원리스트 -->
+	    <select id="selectMemberAll" resultType="com.varHyeran.damoa.member.vo.MemberVo">
+	        SELECT 
+	        	member_no as memberNo, 
+	        	member_name as memberName, 
+	        	member_age as memberAge,
+	        	member_addr as memberAddr,
+	        	member_phone as memberPhone
+	        FROM member
+	    </select>
+</mapper>

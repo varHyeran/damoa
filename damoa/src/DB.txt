@@ -1,0 +1,44 @@
+create database damoa;
+grant select,insert,update,delete,create,drop,alter on damoa.* to 'phr07id'@'localhost' identified by 'phr07pw';
+
+
+-- --------------------------------------------------------
+-- 호스트:                          127.0.0.1
+-- 서버 버전:                        10.1.37-MariaDB - mariadb.org binary distribution
+-- 서버 OS:                        Win64
+-- HeidiSQL 버전:                  9.5.0.5196
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+-- damoa 데이터베이스 구조 내보내기
+CREATE DATABASE IF NOT EXISTS `damoa` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+USE `damoa`;
+
+-- 테이블 damoa.member 구조 내보내기
+CREATE TABLE IF NOT EXISTS `member` (
+  `member_no` int(11) NOT NULL,
+  `member_name` varchar(50) COLLATE utf8_bin NOT NULL,
+  `member_age` int(11) NOT NULL,
+  `member_addr` varchar(50) COLLATE utf8_bin NOT NULL,
+  `member_phone` varchar(50) COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- 테이블 데이터 damoa.member:~0 rows (대략적) 내보내기
+/*!40000 ALTER TABLE `member` DISABLE KEYS */;
+INSERT INTO `member` (`member_no`, `member_name`, `member_age`, `member_addr`, `member_phone`) VALUES
+	(1, '박혜란', 27, '익산', '010-9125'),
+	(2, '방혜원', 24, '전주', '010-1111'),
+	(3, '정진우', 23, '전주', '010-2222'),
+	(4, '양진선', 28, '전주', '010-3333'),
+	(5, '이유림', 24, '봉동', '010-5555');
+/*!40000 ALTER TABLE `member` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
